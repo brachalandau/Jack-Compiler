@@ -1,2 +1,2 @@
-*.eiffel linguist-detectable=false  
+*.eiffel linguist-detectable=true  
 *.assembly linguist-detectable=false  
