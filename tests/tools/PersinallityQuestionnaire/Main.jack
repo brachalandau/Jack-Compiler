@@ -1,0 +1,42 @@
+class Main{
+
+  function void showButtonPressed(){
+    do Screen.setColor(true);//שחור
+    do Screen.drawRectangle(94,130,402,167);// שיהיה סימון שנלחץ הכפתור
+    return;
+ }
+ function void drawButton(){
+  do Screen.setColor(true);//שחור
+  do Screen.drawRectangle(94,130,402,167);// שיהיה סימון שנלחץ הכפתור
+  do Screen.setColor(false);//לבן
+  do Screen.drawRectangle(96,132,400,165);// שיהיה סימון שנלחץ הכפתור
+  return;
+}
+
+  function void main(){
+	   
+   var char key;
+   var Questionnaire ques;
+
+   let key=0;
+   do Main.drawButton ();
+   do Output.moveCursor(8,20);
+   do Output.printString("Personality Predictor");//לבדוק על המרכאות
+   do Output.moveCursor(9,10);
+   do Output.printString("Find out which persona best describes you");//לבדוק על המרכאות
+   do Output.moveCursor(13,14);
+   do Output.printString("Press space to start questionnaire");//לבדוק על המרכאות
+  
+  while (~(key=32)){//32 for space bar
+	   let key=Keyboard.keyPressed();//מחכה שהמשתמש ילחץ  אנטר
+   }
+   do Main.showButtonPressed ();
+   do Sys.wait(150);
+   do Screen.clearScreen();
+   let ques= Questionnaire.new();
+   do ques.run();
+   return;
+  }
+  
+  
+}//JackCompiler PersinallityQuestionnaire

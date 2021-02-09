@@ -1,0 +1,51 @@
+class Cc
+{
+    method String getCOption(int questionNum){
+        var String optionToPrint;
+        if (questionNum=1){
+            let optionToPrint="3. are so excited for her, you make plans to attend               and show your support.";                     
+
+        }
+        else{
+            if(questionNum=2){
+                let optionToPrint="3. Let's study together this weekend so we're                     prepared next time.";
+                
+            }
+            else{
+                if(questionNum=3){
+                    let optionToPrint="3. ask her where she got it and have your mom                     buy you the exact same one";
+           
+                }
+                else{
+                    if(questionNum=4){
+                        let optionToPrint="3. worry that your teammates think it was your fault              you lost. you should have made that goal you missed";
+                                                                      
+                    }
+                    else{
+                        if(questionNum=5){
+                            let optionToPrint="3. start planning a going-away party and think of                 ways you can e-mail and visit each other";
+                  
+                        }
+                        else{
+                            if(questionNum=6){
+                               let optionToPrint="3. carry her books for her and put your sweatshirt                under her foot to elevate it.";
+               
+                            }
+                            else{
+                                if(questionNum=7){
+                                    let optionToPrint="3. can't help but wonder why she does'nt like you                 anymore.";
+              
+                                }
+                                else{//questionNum=8
+                                    let optionToPrint="3. Make sure all your friends have each other's                  camp addresses for care packages!";
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return optionToPrint;
+    }
+}

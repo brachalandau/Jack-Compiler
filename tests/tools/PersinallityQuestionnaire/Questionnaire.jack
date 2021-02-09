@@ -1,0 +1,119 @@
+class Questionnaire{
+
+  field int questionNum;
+  field int markedQuestion;
+  field int aCounter;
+  field int bCounter;
+  field int cCounter;
+  field Question question;
+  field Result result;
+  field Aa a;
+  field Bb b;
+  field Cc c;
+
+  constructor Questionnaire new(){
+    let questionNum=0;//נאפס את מספר השאלה הנוכחית
+    let markedQuestion=0;//נאפס את הסעיף המסומן
+  	let aCounter=0;
+  	let bCounter=0;
+  	let cCounter=0;
+    return this;
+  }
+
+  method void run(){
+    while (questionNum<8){
+       let questionNum=questionNum+1;
+	     let markedQuestion=0;//נאפס את הסעיף המסומן
+	     do cleanScreen(); 
+       do nextQuestion();
+       do getChoice();//תחכה שיבחרו משהו, ותעדכן את הקאונטר המתאים
+    }
+     do cleanScreen(); 
+     
+    if(aCounter>bCounter & aCounter>cCounter){
+         do result.run(1);
+    }
+    else{
+      if(bCounter>cCounter ){
+        do result.run(2);
+      }
+      else//(aCounter>bCounter & aCounter>cCounter)
+      {
+           do result.run(3);
+      }
+    }
+	  return;
+}
+
+  method void cleanScreen(){
+    var int i;
+    do Output.moveCursor(22,63);
+   	let i=0;
+  	while (i<1386){
+	   do Output.backSpace();
+	   let i=i+1;
+    }
+    return;
+  }
+
+ 
+ method void nextQuestion(){ 
+  var String questionString;
+  var String aString;
+  var String bString;
+  var String cString;
+
+    do Output.moveCursor(4,10);
+   
+    let questionString=question.getQuestion(questionNum);
+    do Output.printString(questionString);
+
+    do Output.moveCursor(9,6);
+    let aString=a.getAOption(questionNum);
+    do Output.printString(aString);
+
+    do Output.moveCursor(13,6);
+    let bString=b.getBOption(questionNum);
+    do Output.printString(bString);
+
+    do Output.moveCursor(17,6);
+    let cString=c.getCOption(questionNum);
+    do Output.printString(cString); 
+    return;
+}
+
+ method void getChoice()
+ {
+  var char key;
+  let markedQuestion= 0;
+  let key=0;
+  do Output.moveCursor(20,7);
+
+  while(~(key=49) & ~(key=50) & ~(key=51) ){
+     let key=Keyboard.keyPressed();//מחכה שהמשתמש ילחץ למעלה או למטה 
+  }
+  if(key=49){
+    let markedQuestion=1;
+      do Output.printString("Your Selection is 1");
+      let aCounter=aCounter+1;
+      
+  } 
+  else{
+    if(key=50){
+      let markedQuestion=2;
+      do Output.printString("Your Selection is 2");
+      let bCounter=bCounter+1;
+
+    }
+    else//key=51
+    {
+      let markedQuestion=3;
+      do Output.printString("Your Selection is 3");
+      let cCounter=cCounter+1;
+
+    }
+  }
+   do Sys.wait(1500);
+   return;
+ }
+}

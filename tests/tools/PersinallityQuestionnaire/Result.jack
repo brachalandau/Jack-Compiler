@@ -1,0 +1,34 @@
+class Result{
+    
+      field String printTitleToScreen;
+      field String printResultToScreen;
+
+      method void run(int counter) {//הדפה למסך במימדים  סמיילי איקס שווה 30 וואי שווה6  כותרת איקס שווה 21 ואאי שווה8      ריזלט איקס שווה 5 וואי שווה 11
+        if (counter=1){ 
+
+            do Output.moveCursor(8,18);//כותרת
+            do Output.printString("Warm and Wonderful");
+
+            do Output.moveCursor(11,5);//מלל
+            do Output.printString( "You are always ready to lend an ear and offer words            of encouragement to your friends. You know yourself             and you know how to be a good friend at the same                time. Your friends can count on you." );              
+        }
+          else{
+               if(counter=2){
+                do Output.moveCursor(8,15);//כותרת
+                do Output.printString("Outgoing and On the Ball"); 
+
+                do Output.moveCursor(11,5);//מלל
+                                                                                                                                                
+                do Output.printString("You are creative and a natural leader! You like                to plan, coordinate, and help out. But you need to              be careful not to take too much control, especially             when no one asks you to. Be patient, listen, and                try not to always jump to the rescue! You might                 find some ways to put your leadership skills to                 use, like heading up the school food drive.");    
+            }
+            else{//cCounter is bigest - counter=3
+                do Output.moveCursor(8,20);//כותרת
+                do Output.printString("Shy and Special"); 
+
+                do Output.moveCursor(11,5);//מלל
+                do Output.printString("You sometimes feel insecure about yourself. Try to             remember that you, too, have valuable talents and               strengths. Don't put so much emphasis on how you                measure up to your pals.");  
+            }
+        }
+        return;
+      }
+    }

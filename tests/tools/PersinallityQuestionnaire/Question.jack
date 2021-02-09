@@ -1,0 +1,47 @@
+class Question{
+
+    method String getQuestion(int questionNum){
+        var String questionToPrint;
+        if (questionNum=1){
+            let questionToPrint="Your friend is thinking about signing up for the                  science fair competition at school. You...";                                                                      
+
+        }
+        else{
+            if(questionNum=2){
+                let questionToPrint="Yikes! Your teacher surprised everyone with a                    pop quizin social studies. Afterward,you say                     to your friend...";
+
+            }
+            else{
+                if(questionNum=3){
+                    let questionToPrint="Your friend is wearing a new fuzzy sweater that                   everyone totally loves. your reaction is to...";
+                }
+                else{
+                    if(questionNum=4){
+                        let questionToPrint="Your soccer team makes it to the finals but                      loses in the last minute of the game. After                        the game, you...";
+                    }
+                    else{
+                        if(questionNum=5){
+                            let questionToPrint="Your friend tells you her parents are getting                    divorced and she has to move away. You...";
+
+                        }
+                        else{
+                            if(questionNum=6){
+                                let questionToPrint="Your friend comes to school on crutches after                     she sprained her ankle. You...";
+                            }
+                            else{
+                                if(questionNum=7){
+                                    let questionToPrint="Latly Lili, your best friend dosen't sit next                     to you and seems to want to hang out only with                    Laura. You...";                                }
+
+                                    else{//questionNum=8
+                                    let questionToPrint="It's the last day of school! The last thing you                   do is...";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return questionToPrint;
+    }
+}
+    

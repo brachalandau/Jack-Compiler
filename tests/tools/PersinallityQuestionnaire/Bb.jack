@@ -1,0 +1,44 @@
+  class Bb{
+    
+     method String getBOption(int questionNum){
+          var String optionToPrint;
+            if (questionNum=1){
+                let optionToPrint="2. wonder if you should sign up, too.                             You don't want to miss anything... but you aren't               really sure either.";                                                                    
+            }
+            else{
+                if(questionNum=2){
+                    let optionToPrint="2. How many do you think you got worng?";
+                }
+                else{
+                    if(questionNum=3){
+                        let optionToPrint="2. zip your coat so no one looks next at the                      plain old sweatshirt you're wearing.";             
+                    }
+                    else{
+                        if(questionNum=4){
+                            let optionToPrint="2. tell everyone that you're going to orginize                    an off season conditioning program";             
+                        }
+                        else{
+                            if(questionNum=5){
+                                let optionToPrint="2. worry that you'll never make another friend.";
+                            }
+                            else{
+                                if(questionNum=6){
+                                    let optionToPrint="2. ask her how it happened and tell her how                       sorry you are that she got hurt";
+                                }
+                                else{
+                                    if(questionNum=7){
+                                        let optionToPrint="2. sneak a note into her locker telling her                       that you miss her.";
+                                    }
+                                    else{//questionNum=8
+                                        let optionToPrint="2. peek over your friends shoulders as they                       open their report cards.";                   
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return optionToPrint;
+        }
+    }
