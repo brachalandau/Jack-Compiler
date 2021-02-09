@@ -1,5 +1,5 @@
-*.eiffel linguist-detectable=false  
-*.assembly linguist-detectable=false  
+*.Eiffel linguist-detectable=false  
+*.Assembly linguist-detectable=false  
 *.java linguist-detectable=false  
 *.js linguist-detectable=false  
 *.html linguist-detectable=false  
