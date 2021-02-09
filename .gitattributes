@@ -1,2 +1,7 @@
 *.eiffel linguist-detectable=true  
 *.assembly linguist-detectable=false  
+*.jack linguist-detectable=false  
+*.vm linguist-detectable=false  
+*.xml linguist-detectable=false  
+*.asm linguist-detectable=false  
+*.jack linguist-detectable=false  
